@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ege C. Kaya</title>
+  <meta name="description" content="Ege C. Kaya's homepage" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --link: #0b57d0;
+      --card: #f6f7f8;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0b0b0c; --fg: #e7e7ea; --muted: #a9abb3; --link: #8ab4f8; --card: #141518; --border: #24262b; }
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--fg); background: var(--bg);
+      display: grid; grid-template-rows: auto 1fr; 
+    }
+    header {
+      position: sticky; top: 0; backdrop-filter: blur(6px);
+      background: color-mix(in oklab, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    .nav {
+      max-width: 860px; margin: 0 auto; padding: 12px 16px;
+      display: flex; gap: 16px; align-items: center; justify-content: flex-start;
+    }
+    .nav a { color: var(--fg); text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 10px; }
+    .nav a.active, .nav a:hover { background: var(--card); }
+
+    main { max-width: 860px; margin: 0 auto; padding: 28px 16px 64px; }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 20px; }
+
+    .hero { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: center; }
+    .hero img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 1px solid var(--border); }
+
+    h1 { font-size: 28px; margin: 0 0 4px; }
+    .subtitle { color: var(--muted); margin: 0 0 8px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 4px; }
+    .links a { color: var(--link); text-decoration: none; }
+    .links a:hover { text-decoration: underline; }
+
+    .tagline { margin: 10px 0 0; font-style: italic; color: var(--muted); }
+
+    section { margin-top: 28px; }
+    section h2 { font-size: 20px; margin: 0 0 8px; }
+
+    /* Papers */
+    .paper-groups { display: grid; gap: 22px; }
+    .paper-group h3 { margin: 0 0 10px; font-size: 18px; }
+    ul.papers { list-style: disc; padding-left: 20px; margin: 0; display: grid; gap: 10px; }
+    ul.papers li a { color: var(--link); text-decoration: none; }
+    ul.papers li a:hover { text-decoration: underline; }
+
+    footer { max-width: 860px; margin: 24px auto 40px; padding: 0 16px; color: var(--muted); font-size: 14px; }
+
+    /* Page switching */
+    .view { display: none; }
+    .view.active { display: block; }
+
+    @media (max-width: 560px) { .hero { grid-template-columns: 80px 1fr; } .hero img { width: 80px; height: 80px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main">
+      <a href="#home" id="link-home" class="active">Home</a>
+      <a href="#papers" id="link-papers">Papers</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <div id="home" class="view active">
+      <div class="card hero">
+        <img src="https://i.ibb.co/L2kCT6t/IMG-4691.jpg" alt="A photo taken at Marble Canyon, Arizona." />
+        <div>
+          <h1>Ege C. Kaya</h1>
+          <p class="subtitle">PhD Student, Electrical and Computer Engineering · Purdue University</p>
+          <div class="links">
+            <span class="mono">Email: kayae [at] purdue (dot) edu</span>
+            <span>·</span>
+            <a href="https://scholar.google.com/citations?user=eCdh0SsAAAAJ" rel="noopener">Google Scholar</a>
+            <!-- <span>·</span> -->
+            <!-- <a href="#" rel="noopener">CV (PDF)</a> -->
+          </div>
+          <!-- <p class="tagline">“Il faut cultiver notre jardin.”</p> -->
+        </div>
+      </div>
+
+      <section>
+        <h2>About Me</h2>
+        <div class="card">
+          <p>
+            I’m a fourth year PhD student in the Department of Electrical and Computer Engineering at Purdue University, advised by Prof. Abolfazl Hashemi. 
+            I previously earned my B.Sc. in Computer Engineering and my B.Sc. in Mathematics from Boğaziçi University. My research interests include reinforcement learning and optimization for deep learning.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- PAPERS -->
+    <div id="papers" class="view">
+      <h2 style="margin-top:0">Papers</h2>
+      <div class="paper-groups">
+        <div class="paper-group">
+          <h3>Preprints</h3>
+          <ul class="papers">
+            <li>
+              <strong>Submodular maximization approaches for equitable client selection in federated learning</strong> — Jiménez, A. C. C., Kaya, E. C., Ye, L., & Hashemi, A. (2024). 
+              <a href="https://arxiv.org/abs/2408.13683" target="_blank" rel="noopener">[URL]</a>
+            </li>
+          </ul>
+        </div>
+        <div class="paper-group">
+          <h3>Conference Proceedings</h3>
+          <ul class="papers">
+            <li>
+              <strong>Equitable Client Selection in Federated Learning via Truncated Submodular Maximization</strong> — Jiménez, A. C. C., Kaya, E. C., Ye, L., & Hashemi, A. IEEE 63rd Conference on Decision and Control (CDC) , 2024. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10886563" target="_blank" rel="noopener">[URL]</a>
+            </li>
+            <li>
+              <strong>Relative entropy regularization for robust submodular multi-task subset selection</strong> — Kaya, E. C., & Hashemi, A. 59th Annual Allerton Conference on Communication, Control, and Computing (Allerton), 2023. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10313462" target="_blank" rel="noopener">[URL]</a>
+            </li>
+            <li>
+              <strong>Communication-constrained exchange of zeroth-order information with application to collaborative target tracking</strong> — Kaya, E. C., Sahin, M. B., & Hashemi, A. IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2023. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10096148" target="_blank" rel="noopener">[URL]</a>
+            </li>
+            <li>
+              <strong>High probability guarantees for submodular maximization via boosted stochastic greedy</strong> — Jiménez, A. C. C., Kaya, E. C., & Hashemi, A. 57th Asilomar Conference on Signals, Systems, and Computers, 2023. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10476958" target="_blank" rel="noopener">[URL]</a>
+            </li>
+          </ul>
+        </div>
+        <div class="paper-group">
+          <h3>Journal Publications</h3>
+          <ul class="papers">
+            <li>
+              <strong>Randomized greedy methods for weak submodular sensor selection with robustness considerations</strong> — Kaya, E. C., Hibbard, M., Tanaka, T., Topcu, U., & Hashemi, A. Automatica, 2025. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10745267" target="_blank" rel="noopener">[URL]</a>
+            </li>
+            <li>
+              <strong>Localized distributional robustness in submodular multi-task subset selection</strong> — Kaya, E. C., & Hashemi, A. IEEE Transactions on Signal Processing, 2024. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10745267" target="_blank" rel="noopener">[URL]</a>
+            </li>
+            <li>
+              <strong>Communication-efficient zeroth-order distributed online optimization: Algorithm, theory, and applications</strong> — Kaya, E. C., Sahin, M. B., & Hashemi, A. IEEE Access, 2023. 
+              <a href="https://ieeexplore.ieee.org/abstract/document/10147304" target="_blank" rel="noopener">[URL]</a>
+            </li>
+          </ul>
+        </div>
+        <div class="paper-group">
+          <h3>Workshop Papers</h3>
+          <ul class="papers">
+            <li>
+              <strong>Beyond marginals: Capturing correlated returns through joint distributional reinforcement learning</strong> — Kaya, E. C., Ghasemi, M., & Hashemi, A. NeurIPS 2025 Workshop: Second Workshop on Aligning Reinforcement Learning Experimentalists and Theorists, 2025. 
+            </li>
+          </ul>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Ege C. Kaya</span>
+  </footer>
+
+  <script>
+    // Tiny client-side "router" to mimic two pages (Home / Papers)
+    const routes = ["home", "papers"];
+    const views = Object.fromEntries(routes.map(id => [id, document.getElementById(id)]));
+    const links = Object.fromEntries(routes.map(id => [id, document.getElementById("link-"+id)]));
+
+    function setActive(id) {
+      for (const r of routes) {
+        views[r].classList.toggle("active", r === id);
+        links[r].classList.toggle("active", r === id);
+      }
+      if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id);
+    }
+
+    function handleHash() {
+      const id = location.hash.replace('#', '') || 'home';
+      setActive(routes.includes(id) ? id : 'home');
+    }
+
+    window.addEventListener('hashchange', handleHash);
+    handleHash();
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
