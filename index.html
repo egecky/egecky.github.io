@@ -4,248 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ege C. Kaya</title>
-  <meta name="description" content="Ege C. Kaya. PhD candidate at Purdue University working on reinforcement learning, optimization, and stochastic decision-making." />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #171717;
-      --muted: #62646a;
-      --subtle: #f7f7f8;
-      --card: #ffffff;
-      --border: #e5e7eb;
-      --link: #1456b8;
-      --accent: #eef4ff;
-      --accent-border: #cdddfa;
-      --shadow: 0 14px 40px rgba(0, 0, 0, 0.06);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0b0c;
-        --fg: #ececf0;
-        --muted: #adafb8;
-        --subtle: #141518;
-        --card: #111216;
-        --border: #262832;
-        --link: #8ab4f8;
-        --accent: #10192b;
-        --accent-border: #243c66;
-        --shadow: none;
-      }
-    }
-
-    * { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      color: var(--fg);
-      background: var(--bg);
-      font: 16px/1.62 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    }
-
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      border-bottom: 1px solid var(--border);
-      background: color-mix(in oklab, var(--bg) 88%, transparent);
-      backdrop-filter: blur(8px);
-    }
-
-    .nav {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nav a {
-      color: var(--fg);
-      font-weight: 650;
-      padding: 8px 10px;
-      border-radius: 10px;
-    }
-
-    .nav a:hover {
-      background: var(--subtle);
-      text-decoration: none;
-    }
-
-    main {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 34px 20px 72px;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 28px;
-      align-items: center;
-      padding-bottom: 30px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .portrait {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-    }
-
-    h1 {
-      margin: 0 0 6px;
-      font-size: clamp(32px, 5vw, 46px);
-      line-height: 1.12;
-      letter-spacing: -0.035em;
-    }
-
-    .subtitle {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 18px;
-    }
-
-    .summary {
-      max-width: 760px;
-      margin: 0;
-      font-size: 17px;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 14px;
-      margin-top: 18px;
-      color: var(--muted);
-    }
-
-    .links span {
-      color: var(--muted);
-    }
-
-    section {
-      margin-top: 38px;
-    }
-
-    section h2 {
-      margin: 0 0 14px;
-      font-size: 22px;
-      letter-spacing: -0.02em;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-    }
-
-    .card p {
-      margin: 0 0 12px;
-      color: var(--muted);
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .papers {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 14px;
-    }
-
-    .paper {
-      padding: 16px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .paper:first-child {
-      border-top: 0;
-      padding-top: 0;
-    }
-
-    .title {
-      display: block;
-      font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .authors,
-    .venue,
-    .note {
-      display: block;
-      color: var(--muted);
-      margin-top: 3px;
-    }
-
-    .badge {
-      display: inline-block;
-      margin-left: 6px;
-      padding: 1px 7px;
-      border: 1px solid var(--accent-border);
-      border-radius: 999px;
-      background: var(--accent);
-      color: var(--fg);
-      font-size: 13px;
-      font-weight: 650;
-      white-space: nowrap;
-    }
-
-    .paper-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 5px;
-      font-size: 15px;
-    }
-
-    .compact-list {
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-    }
-
-    footer {
-      max-width: 980px;
-      margin: 0 auto 40px;
-      padding: 0 20px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 720px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 18px;
-      }
-
-      .portrait {
-        width: 108px;
-        height: 108px;
-      }
-
-    }
-  </style>
+  <meta name="description" content="Ege C. Kaya is a Purdue ECE PhD candidate working on reinforcement learning, stochastic optimization, and LLM post-training." />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
   <header>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a>
+      <a href="#about" class="active">About</a>
       <a href="#research">Research</a>
       <a href="#papers">Papers</a>
+      <a href="blog/">Blog</a>
     </nav>
   </header>
 
@@ -256,15 +24,33 @@
         <h1>Ege C. Kaya</h1>
         <p class="subtitle">PhD Candidate in Electrical and Computer Engineering, Purdue University</p>
         <p class="summary">
-          I work on reinforcement learning, optimization, and stochastic decision-making, with an emphasis on
-          mathematically grounded algorithms for distributional RL, multi-objective and risk-sensitive decision-making,
-          stochastic approximation, and robust discrete optimization.
+          I work on reinforcement learning, stochastic optimization, and LLM post-training. My research focuses on
+          distributional and risk-sensitive decision-making, learning from Markovian data, and evolution-strategy
+          methods for language models.
         </p>
         <div class="links">
           <span>kayae [at] purdue [dot] edu</span>
+          <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
           <a href="https://scholar.google.com/citations?user=eCdh0SsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
           <a href="https://www.linkedin.com/in/egecky/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/egecky" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Highlights">
+      <div class="signal-grid">
+        <div class="signal">
+          <strong>Research</strong>
+          <span>Distributional RL, coupled-dynamics decision-making, stochastic approximation, and optimization.</span>
+        </div>
+        <div class="signal">
+          <strong>Recent Work</strong>
+          <span>NeurIPS 2026 accepted work, a UAI 2026 oral paper, and research on LLM post-training.</span>
+        </div>
+        <div class="signal">
+          <strong>Industry</strong>
+          <span>Previously a PhD Research Intern at Dolby Laboratories. ORDO, conceived there, led to a UAI 2026 paper.</span>
         </div>
       </div>
     </section>
@@ -273,19 +59,19 @@
       <h2>Research</h2>
       <div class="card">
         <p>
-          My current research develops theoretical foundations and algorithms for reinforcement learning and stochastic decision-making.
-          I am especially interested in settings where the object of interest is richer than a scalar expected return, including
-          distributional RL, multi-objective RL, risk-sensitive decision-making, and coupled-dynamics environments.
+          My research develops theory and algorithms for reinforcement learning and stochastic decision-making. I study
+          distributional and average-reward RL, multi-objective and risk-sensitive decision-making, and coupled-dynamics
+          environments where actions have correlated outcomes.
         </p>
         <p>
-          A second line of work studies stochastic approximation and optimization methods that arise in reinforcement learning,
-          including categorical distributional temporal-difference learning, average-reward distributional RL, non-expansive
-          fixed-point problems, and non-convex stochastic optimization under weak noise assumptions.
+          A second line studies stochastic approximation and optimization under dependent data and weak noise assumptions.
+          Recent work includes categorical distributional temporal-difference learning, non-expansive fixed-point problems
+          with Markovian samples, and non-convex optimization under unbounded variance.
         </p>
         <p>
-          I am also currently learning and working on practical aspects of modern large language models, including
-          decoder-only transformers, causal language modeling, supervised fine-tuning, post-training, evaluation, and
-          the role of reinforcement learning and reward modeling in preference optimization.
+          I also work on the theory and practice of LLM post-training. Our recent work analyzes the mean update and
+          finite-rank variance of low-rank evolution strategies, and introduces LOO-ROLL, which uses a leave-one-out
+          baseline to make more efficient use of model evaluations.
         </p>
         <p>
           Earlier in my PhD, I worked on robust and submodular optimization, with applications to sensor selection,
@@ -297,7 +83,15 @@
     <section id="papers">
       <h2>Selected Papers and Preprints</h2>
       <div class="card">
+        <h3>Peer-Reviewed</h3>
         <ul class="papers">
+          <li class="paper">
+            <span class="title">Quotient-Categorical Representations for Bellman-Compatible Average-Reward Distributional Reinforcement Learning <span class="badge">NeurIPS 2026, accepted</span></span>
+            <span class="authors">Ege C. Kaya, Aliasghar Pourghani, Vijay Gupta, and Abolfazl Hashemi</span>
+            <span class="venue">Advances in Neural Information Processing Systems, 2026.</span>
+            <span class="paper-links"><a href="https://arxiv.org/abs/2605.11289" target="_blank" rel="noopener">arXiv</a></span>
+          </li>
+
           <li class="paper">
             <span class="title">Joint MDPs and Reinforcement Learning in Coupled-Dynamics Environments <span class="badge">UAI 2026 Oral</span></span>
             <span class="authors">Ege C. Kaya, Mahsa Ghasemi, and Abolfazl Hashemi</span>
@@ -313,36 +107,59 @@
           </li>
 
           <li class="paper">
-            <span class="title">A Finite-Iteration Theory for Asynchronous Categorical Distributional Temporal-Difference Learning</span>
-            <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
-            <span class="venue">Preprint, 2026.</span>
-            <span class="paper-links"><a href="https://arxiv.org/abs/2605.06866" target="_blank" rel="noopener">arXiv</a></span>
-          </li>
-
-          <li class="paper">
-            <span class="title">Quotient-Categorical Representations for Bellman-Compatible Average-Reward Distributional Reinforcement Learning</span>
-            <span class="authors">Ege C. Kaya, Aliasghar Pourghani, Vijay Gupta, and Abolfazl Hashemi</span>
-            <span class="venue">Preprint, 2026.</span>
-            <span class="paper-links"><a href="https://arxiv.org/abs/2605.11289" target="_blank" rel="noopener">arXiv</a></span>
-          </li>
-
-          <li class="paper">
-            <span class="title">Lower Bounds and Proximally Anchored SGD for Non-Convex Minimization Under Unbounded Variance</span>
-            <span class="authors">Arda Fazla, Ege C. Kaya, Antesh Upadhyay, and Abolfazl Hashemi</span>
-            <span class="venue">Preprint, 2026.</span>
-            <span class="paper-links"><a href="https://arxiv.org/abs/2604.16620" target="_blank" rel="noopener">arXiv</a></span>
-          </li>
-
-          <li class="paper">
             <span class="title">Randomized Greedy Methods for Weak Submodular Sensor Selection with Robustness Considerations</span>
             <span class="authors">Ege C. Kaya, Michael Hibbard, Takashi Tanaka, Ufuk Topcu, and Abolfazl Hashemi</span>
-            <span class="venue">Automatica, 2025.</span>
+            <span class="venue">Automatica, 171, 2025.</span>
           </li>
 
           <li class="paper">
             <span class="title">Localized Distributional Robustness in Submodular Multi-Task Subset Selection</span>
             <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
             <span class="venue">IEEE Transactions on Signal Processing, 2024.</span>
+          </li>
+        </ul>
+
+        <h3>Under Review</h3>
+        <ul class="papers">
+          <li class="paper">
+            <span class="title">EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale <span class="badge">ICLR 2027</span></span>
+            <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
+            <span class="venue">Under review.</span>
+            <span class="paper-links"><a href="https://arxiv.org/abs/2609.10980" target="_blank" rel="noopener">arXiv</a></span>
+          </li>
+
+          <li class="paper">
+            <span class="title">Why Does Adaptive Batching Help LLM Pretraining? A Perspective from Unbounded Variance <span class="badge">ICLR 2027</span></span>
+            <span class="authors">Arda Fazla, Antesh Upadhyay, Ege C. Kaya, M. Berk Sahin, and Abolfazl Hashemi</span>
+            <span class="venue">ICLR 2027, under review.</span>
+          </li>
+
+          <li class="paper">
+            <span class="title">Lower Bounds and Proximally Anchored SGD for Non-Convex Minimization Under Unbounded Variance <span class="badge">ICLR 2027</span></span>
+            <span class="authors">Arda Fazla, Ege C. Kaya, Antesh Upadhyay, and Abolfazl Hashemi. First three authors contributed equally.</span>
+            <span class="venue">Under review.</span>
+            <span class="paper-links"><a href="https://arxiv.org/abs/2604.16620" target="_blank" rel="noopener">arXiv</a></span>
+          </li>
+
+          <li class="paper">
+            <span class="title">A Banach-Space Theory of Markovian Halpern Iteration for Non-Expansive Maps <span class="badge">ICLR 2027</span></span>
+            <span class="authors">Ege C. Kaya, Arda Fazla, M. Berk Sahin, and Abolfazl Hashemi</span>
+            <span class="venue">Under review.</span>
+            <span class="paper-links"><a href="https://arxiv.org/abs/2608.15966" target="_blank" rel="noopener">arXiv</a></span>
+          </li>
+
+          <li class="paper">
+            <span class="title">A Finite-Iteration Theory for Asynchronous Categorical Distributional Temporal-Difference Learning</span>
+            <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
+            <span class="venue">AISTATS 2027, under review.</span>
+            <span class="paper-links"><a href="https://arxiv.org/abs/2605.06866" target="_blank" rel="noopener">arXiv</a></span>
+          </li>
+
+          <li class="paper">
+            <span class="title">Learning to Control Coupled-Dynamics Environments with Joint Markov Decision Processes <span class="badge">TMLR</span></span>
+            <span class="authors">Ege C. Kaya, Aliasghar Pourghani, Mahsa Ghasemi, Vijay Gupta, and Abolfazl Hashemi</span>
+            <span class="venue">Under review.</span>
+            <span class="paper-links"><a href="https://arxiv.org/abs/2608.22765" target="_blank" rel="noopener">arXiv</a></span>
           </li>
         </ul>
       </div>
@@ -357,6 +174,26 @@
           <li>Communication-Constrained Exchange of Zeroth-Order Information with Application to Collaborative Target Tracking. ICASSP, 2023.</li>
           <li>High Probability Guarantees for Submodular Maximization via Boosted Stochastic Greedy. Asilomar, 2023.</li>
           <li>Communication-Efficient Zeroth-Order Distributed Online Optimization: Algorithm, Theory, and Applications. IEEE Access, 2023.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="card">
+        <ul class="posts">
+          <li class="post-row">
+            <span class="date">September 2026</span>
+            <a class="title" href="blog/low-rank-eggroll.html">What Low-Rank EGGROLL Actually Does</a>
+            <span class="description">Mean-field bias, finite-rank variance, and LOO-ROLL's one-evaluation alternative.</span>
+            <span class="post-links"><a href="blog/low-rank-eggroll.html">Read article</a></span>
+          </li>
+          <li class="post-row">
+            <span class="date">September 2026</span>
+            <a class="title" href="blog/stochastic-halpern-markov-trajectory.html">Stochastic Halpern Iteration from a Single Markov Trajectory</a>
+            <span class="description">Last-iterate guarantees for non-expansive operators under dependent sampling.</span>
+            <span class="post-links"><a href="blog/stochastic-halpern-markov-trajectory.html">Read article</a></span>
+          </li>
         </ul>
       </div>
     </section>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog · Ege C. Kaya</title>
+  <meta name="description" content="Blog posts by Ege C. Kaya." />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../">Home</a>
+      <a href="../#research">Research</a>
+      <a href="../#papers">Papers</a>
+      <a href="./" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="blog-header">
+      <h1>Blog</h1>
+      <p>
+        Research notes on reinforcement learning, stochastic optimization, and language-model training. These posts are
+        written to explain what the results establish, what assumptions they need, and where their limits are.
+      </p>
+    </section>
+
+    <section>
+      <div class="card">
+        <ul class="posts">
+          <li class="post-row">
+            <span class="date">September 27, 2026</span>
+            <a class="title" href="low-rank-eggroll.html">What Low-Rank EGGROLL Actually Does</a>
+            <span class="description">How low-rank perturbations affect the expected update and variance, and how LOO-ROLL uses evaluations more efficiently.</span>
+            <span class="post-links"><a href="low-rank-eggroll.html">Read article</a></span>
+          </li>
+          <li class="post-row">
+            <span class="date">September 27, 2026</span>
+            <a class="title" href="stochastic-halpern-markov-trajectory.html">Stochastic Halpern Iteration from a Single Markov Trajectory</a>
+            <span class="description">PAGE-based last-iterate guarantees for non-expansive operators with Markovian sampling, in Hilbert and Banach geometries.</span>
+            <span class="post-links"><a href="stochastic-halpern-markov-trajectory.html">Read article</a></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Ege C. Kaya</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

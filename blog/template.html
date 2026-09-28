@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Post Title · Ege C. Kaya</title>
+  <meta name="description" content="Short description of the post." />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../">Home</a>
+      <a href="../#research">Research</a>
+      <a href="../#papers">Papers</a>
+      <a href="./" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <main class="article">
+    <article>
+      <h1>Post Title</h1>
+      <span class="date">Month Year</span>
+
+      <p>
+        Write the post here.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Ege C. Kaya</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

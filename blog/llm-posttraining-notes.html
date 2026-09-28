@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes on Learning LLM Post-Training · Ege C. Kaya</title>
+  <meta name="description" content="Notes on learning practical LLM post-training from an RL and optimization background." />
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../">Home</a>
+      <a href="../#research">Research</a>
+      <a href="../#papers">Papers</a>
+      <a href="./" class="active">Blog</a>
+    </nav>
+  </header>
+
+  <main class="article">
+    <article>
+      <h1>Notes on Learning LLM Post-Training</h1>
+      <span class="date">July 2026</span>
+
+      <p>
+        This is a placeholder post for notes from my current effort to build practical fluency in modern language models
+        and post-training. My background is in reinforcement learning, optimization, stochastic approximation, and
+        submodular optimization, so the goal is not to pretend these topics are new to me in a week. The goal is to
+        connect that background to the actual mechanics of decoder-only transformers, supervised fine-tuning,
+        preference optimization, reward modeling, and evaluation.
+      </p>
+
+      <p>
+        Some of the topics I plan to write about here:
+      </p>
+
+      <ul>
+        <li>Tokenization and why tokens are not words.</li>
+        <li>Causal masking and the difference between training-time tensors and inference-time generation.</li>
+        <li>Greedy decoding, temperature, top-p sampling, and why decoding is not training.</li>
+        <li>LoRA supervised fine-tuning and what is actually being optimized.</li>
+        <li>Where reinforcement learning enters post-training, and where the analogy is weaker than it first looks.</li>
+      </ul>
+
+      <p>
+        I will replace this placeholder with a real post once the notes are more useful than merely autobiographical.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> Ege C. Kaya</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
