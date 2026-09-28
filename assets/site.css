@@ -146,32 +146,6 @@ section { margin-top: 40px; }
   color: var(--muted);
 }
 
-.signal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.signal {
-  background: var(--soft);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 14px;
-}
-
-.signal strong {
-  display: block;
-  color: var(--fg);
-  line-height: 1.3;
-}
-
-.signal span {
-  display: block;
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
 .papers,
 .posts {
   list-style: none;
@@ -334,7 +308,4 @@ footer {
     height: 108px;
   }
 
-  .signal-grid {
-    grid-template-columns: 1fr;
-  }
 }
