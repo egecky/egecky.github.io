@@ -22,11 +22,11 @@
       <img class="portrait" src="assets/profile-photo.jpg" alt="Ege C. Kaya" />
       <div>
         <h1>Ege C. Kaya</h1>
+        <p class="job-market">On the job market for research roles in reinforcement learning and LLM post-training</p>
         <p class="subtitle">PhD Candidate in Electrical and Computer Engineering, Purdue University</p>
         <p class="summary">
-          I work on reinforcement learning, stochastic optimization, and LLM post-training. My research focuses on
-          distributional and risk-sensitive decision-making, learning from Markovian data, and evolution-strategy
-          methods for language models.
+          I study reinforcement learning and stochastic optimization, with a focus on theory that explains an algorithm’s
+          behavior. More recently, I’ve been working on efficient post-training methods for language models.
         </p>
         <div class="links">
           <span>kayae [at] purdue [dot] edu</span>
@@ -42,23 +42,15 @@
       <h2>Research</h2>
       <div class="card">
         <p>
-          My research develops theory and algorithms for reinforcement learning and stochastic decision-making. I study
-          distributional and average-reward RL, multi-objective and risk-sensitive decision-making, and coupled-dynamics
-          environments where actions have correlated outcomes.
+          I started with robust and submodular optimization, including work on sensor selection and distributed methods.
+          My PhD research then moved toward reinforcement learning and stochastic approximation. I study distributional
+          and average-reward RL, decision-making with coupled dynamics, and learning from dependent data or noise with
+          unbounded variance.
         </p>
         <p>
-          A second line studies stochastic approximation and optimization under dependent data and weak noise assumptions.
-          Recent work includes categorical distributional temporal-difference learning, non-expansive fixed-point problems
-          with Markovian samples, and non-convex optimization under unbounded variance.
-        </p>
-        <p>
-          I also work on the theory and practice of LLM post-training. Our recent work analyzes the mean update and
-          finite-rank variance of low-rank evolution strategies, and introduces LOO-ROLL, which uses a leave-one-out
-          baseline to make more efficient use of model evaluations.
-        </p>
-        <p>
-          Earlier in my PhD, I worked on robust and submodular optimization, with applications to sensor selection,
-          multi-task subset selection, federated learning, and distributed online optimization.
+          More recently, I’ve been working on LLM post-training. I’m interested in when low-rank evolution strategies
+          behave differently from dense Gaussian methods, and whether they can make training less expensive. Our
+          EGGROLL and LOO-ROLL work looks at those questions through both analysis and experiments on language models.
         </p>
       </div>
     </section>
@@ -69,14 +61,14 @@
         <ul class="papers">
           <li class="paper">
             <span class="title">Quotient-Categorical Representations for Bellman-Compatible Average-Reward Distributional Reinforcement Learning <span class="badge">NeurIPS 2026, accepted</span></span>
-            <span class="authors">Ege C. Kaya, Aliasghar Pourghani, Vijay Gupta, and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong>, Aliasghar Pourghani, Vijay Gupta, and Abolfazl Hashemi</span>
             <span class="venue">Advances in Neural Information Processing Systems, 2026.</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2605.11289" target="_blank" rel="noopener">arXiv</a></span>
           </li>
 
           <li class="paper">
             <span class="title">Joint MDPs and Reinforcement Learning in Coupled-Dynamics Environments <span class="badge">UAI 2026 Oral</span></span>
-            <span class="authors">Ege C. Kaya, Mahsa Ghasemi, and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong>, Mahsa Ghasemi, and Abolfazl Hashemi</span>
             <span class="venue">Uncertainty in Artificial Intelligence, 2026.</span>
             <span class="note">Oral presentation. Top 2.2% of 1,087 submissions.</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2603.06946" target="_blank" rel="noopener">arXiv</a></span>
@@ -84,53 +76,53 @@
 
           <li class="paper">
             <span class="title">Stochastic Dominance Driven First-Order Policy Optimization for Multi-Objective Reinforcement Learning</span>
-            <span class="authors">Ege C. Kaya, Kadierdan Kaheman, Jason M. Cloud, and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong>, Kadierdan Kaheman, Jason M. Cloud, and Abolfazl Hashemi</span>
             <span class="venue">Uncertainty in Artificial Intelligence, 2026.</span>
           </li>
 
           <li class="paper">
             <span class="title">Randomized Greedy Methods for Weak Submodular Sensor Selection with Robustness Considerations</span>
-            <span class="authors">Ege C. Kaya, Michael Hibbard, Takashi Tanaka, Ufuk Topcu, and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong>, Michael Hibbard, Takashi Tanaka, Ufuk Topcu, and Abolfazl Hashemi</span>
             <span class="venue">Automatica, 171, 2025.</span>
           </li>
 
           <li class="paper">
             <span class="title">Localized Distributional Robustness in Submodular Multi-Task Subset Selection</span>
-            <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong> and Abolfazl Hashemi</span>
             <span class="venue">IEEE Transactions on Signal Processing, 2024.</span>
           </li>
           <li class="paper">
             <span class="title">EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale <span class="badge">ICLR 2027, under review</span></span>
-            <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong> and Abolfazl Hashemi</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2609.10980" target="_blank" rel="noopener">arXiv</a></span>
           </li>
 
           <li class="paper">
             <span class="title">Why Does Adaptive Batching Help LLM Pretraining? A Perspective from Unbounded Variance <span class="badge">ICLR 2027, under review</span></span>
-            <span class="authors">Arda Fazla, Antesh Upadhyay, Ege C. Kaya, M. Berk Sahin, and Abolfazl Hashemi</span>
+            <span class="authors">Arda Fazla, Antesh Upadhyay, <strong class="author-me">Ege C. Kaya</strong>, M. Berk Sahin, and Abolfazl Hashemi</span>
           </li>
 
           <li class="paper">
             <span class="title">Lower Bounds and Proximally Anchored SGD for Non-Convex Minimization Under Unbounded Variance <span class="badge">ICLR 2027, under review</span></span>
-            <span class="authors">Arda Fazla, Ege C. Kaya, Antesh Upadhyay, and Abolfazl Hashemi. First three authors contributed equally.</span>
+            <span class="authors">Arda Fazla, <strong class="author-me">Ege C. Kaya</strong>, Antesh Upadhyay, and Abolfazl Hashemi. First three authors contributed equally.</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2604.16620" target="_blank" rel="noopener">arXiv</a></span>
           </li>
 
           <li class="paper">
             <span class="title">A Banach-Space Theory of Markovian Halpern Iteration for Non-Expansive Maps <span class="badge">ICLR 2027, under review</span></span>
-            <span class="authors">Ege C. Kaya, Arda Fazla, M. Berk Sahin, and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong>, Arda Fazla, M. Berk Sahin, and Abolfazl Hashemi</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2608.15966" target="_blank" rel="noopener">arXiv</a></span>
           </li>
 
           <li class="paper">
             <span class="title">A Finite-Iteration Theory for Asynchronous Categorical Distributional Temporal-Difference Learning <span class="badge">AISTATS 2027, under review</span></span>
-            <span class="authors">Ege C. Kaya and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong> and Abolfazl Hashemi</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2605.06866" target="_blank" rel="noopener">arXiv</a></span>
           </li>
 
           <li class="paper">
             <span class="title">Learning to Control Coupled-Dynamics Environments with Joint Markov Decision Processes <span class="badge">TMLR, under review</span></span>
-            <span class="authors">Ege C. Kaya, Aliasghar Pourghani, Mahsa Ghasemi, Vijay Gupta, and Abolfazl Hashemi</span>
+            <span class="authors"><strong class="author-me">Ege C. Kaya</strong>, Aliasghar Pourghani, Mahsa Ghasemi, Vijay Gupta, and Abolfazl Hashemi</span>
             <span class="paper-links"><a href="https://arxiv.org/abs/2608.22765" target="_blank" rel="noopener">arXiv</a></span>
           </li>
         </ul>
@@ -156,15 +148,13 @@
         <ul class="posts">
           <li class="post-row">
             <span class="date">September 2026</span>
-            <a class="title" href="blog/low-rank-eggroll.html">What Low-Rank EGGROLL Actually Does</a>
-            <span class="description">Mean-field bias, finite-rank variance, and LOO-ROLL's one-evaluation alternative.</span>
-            <span class="post-links"><a href="blog/low-rank-eggroll.html">Read article</a></span>
+            <a class="title" href="blog/low-rank-eggroll.html">Low-Rank Perturbations in EGGROLL</a>
+            <span class="description">An analysis of the mean update and variance of low-rank EGGROLL, plus LOO-ROLL's one-evaluation estimator.</span>
           </li>
           <li class="post-row">
             <span class="date">September 2026</span>
-            <a class="title" href="blog/stochastic-halpern-markov-trajectory.html">Stochastic Halpern Iteration from a Single Markov Trajectory</a>
-            <span class="description">Last-iterate guarantees for non-expansive operators under dependent sampling.</span>
-            <span class="post-links"><a href="blog/stochastic-halpern-markov-trajectory.html">Read article</a></span>
+            <a class="title" href="blog/stochastic-halpern-markov-trajectory.html">Halpern Iteration with Markovian Data</a>
+            <span class="description">Last-iterate guarantees for Halpern iteration with PAGE on a single continuing Markov trajectory.</span>
           </li>
         </ul>
       </div>
