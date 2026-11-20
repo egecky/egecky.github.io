@@ -150,8 +150,7 @@ section { margin-top: 40px; }
   color: var(--muted);
 }
 
-.papers,
-.posts {
+.papers {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -159,14 +158,12 @@ section { margin-top: 40px; }
   gap: 14px;
 }
 
-.paper,
-.post-row {
+.paper {
   padding: 16px 0;
   border-top: 1px solid var(--border);
 }
 
-.paper:first-child,
-.post-row:first-child {
+.paper:first-child {
   border-top: 0;
   padding-top: 0;
 }
@@ -180,9 +177,7 @@ section { margin-top: 40px; }
 
 .authors,
 .venue,
-.note,
-.date,
-.description {
+.note {
   display: block;
   color: var(--muted);
   margin-top: 3px;
@@ -206,8 +201,7 @@ section { margin-top: 40px; }
   white-space: nowrap;
 }
 
-.paper-links,
-.post-links {
+.paper-links {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -219,83 +213,6 @@ section { margin-top: 40px; }
   margin: 0;
   padding-left: 20px;
   color: var(--muted);
-}
-
-.blog-header {
-  padding-bottom: 28px;
-  border-bottom: 1px solid var(--border);
-}
-
-.blog-header p {
-  max-width: 720px;
-  color: var(--muted);
-  font-size: 17px;
-}
-
-.article {
-  max-width: 760px;
-}
-
-.article h1 {
-  margin-bottom: 10px;
-}
-
-.article h2 {
-  margin: 34px 0 10px;
-  font-size: 23px;
-}
-
-.article .date {
-  margin-bottom: 28px;
-}
-
-.article article > p:first-of-type {
-  color: var(--fg);
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
-
-.article p,
-.article li {
-  color: #353c44;
-}
-
-.article img {
-  display: block;
-  width: auto !important;
-  max-width: 100%;
-  height: auto !important;
-  margin: 22px auto;
-  border-radius: 10px;
-}
-
-.article table {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  margin: 18px 0 24px;
-  border-collapse: collapse;
-  color: var(--muted);
-}
-
-.article th,
-.article td {
-  padding: 9px 12px;
-  border: 1px solid var(--border);
-}
-
-.article th {
-  color: var(--fg);
-  background: var(--soft);
-}
-
-.article code {
-  color: var(--fg);
-  background: var(--soft);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 1px 5px;
 }
 
 footer {
